@@ -16,6 +16,7 @@ alumnos = ['Andros_',
 al = ['Andros_'];
 
 function descargarDatos(usuario) {
+    console.log('Hola');
     let api = "http://codeforces.com/api/user.info?handles=";
     for(let i=0; i<al.length-1; i++){
         api += (al[i] + ";");
