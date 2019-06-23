@@ -13,15 +13,13 @@ alumnos = ['Andros_',
            'AuroraPrz1809',
            'alexia_martinez'];
 
-al = ['Andros_'];
-
 function descargarDatos(usuario) {
     console.log('Hola');
     let api = "https://codeforces.com/api/user.info?handles=";
-    for(let i=0; i<al.length-1; i++){
-        api += (al[i] + ";");
+    for(let i=0; i<alumnos.length-1; i++){
+        api += (alumnos[i] + ";");
     }
-    api += (al[al.length-1] + ";");
+    api += (alumnos[alumnos.length-1] + ";");
 
     //llamado al Fetch
     fetch(api)
@@ -54,7 +52,6 @@ function imprimirHTML(dato) {
         tr.innerHTML = `
             <tr>
                 <td class="${rank}">${nombre}</td>
-                <td>${pais}</td>
                 <td>${ranking}</td>
             </tr>
         `;
