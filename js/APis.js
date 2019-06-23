@@ -13,12 +13,14 @@ alumnos = ['Andros_',
            'AuroraPrz1809',
            'alexia_martinez'];
 
+al = ['Andros_'];
+
 function descargarDatos(usuario) {
     let api = "http://codeforces.com/api/user.info?handles=";
-    for(let i=0; i<alumnos.length-1; i++){
-        api += (alumnos[i] + ";");
+    for(let i=0; i<al.length-1; i++){
+        api += (al[i] + ";");
     }
-    api += (alumnos[alumnos.length-1] + ";");
+    api += (al[al.length-1] + ";");
 
     //llamado al Fetch
     fetch(api)
