@@ -27,11 +27,15 @@ function descargarDatos(usuario) {
         .then(dato => imprimirHTML(dato.result));
 }
 
+function compare (a,b){
+    return a.rating < b.rating;
+}
+
 function imprimirHTML(dato) {
 
     console.log(dato);
 
-    dato.sort( function(a, b){return a.rating < b.rating} );
+    dato.sort( compare );
 
     dato.forEach(usuario => {
         //usuario = dato[0];
@@ -39,7 +43,6 @@ function imprimirHTML(dato) {
         //console.log(dato[0]);
 
         const nombre = usuario.handle;
-        const pais = usuario.country;
         const ranking = usuario.rating;
         let rank = usuario.rank;
 
