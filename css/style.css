@@ -1,0 +1,42 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+th {
+    font-weight: 500;
+}
+table, td, th {  
+    border: 1px solid #ddd;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+}
+th {
+    background-color: #aed7f2;
+}
+
+/** Utilidades **/
+
+.centrar-texto {
+    text-align: center;
+}
+.pupil {
+    color: green;
+}
+.newbie{
+    color: gray;
+}
+.expert{
+    color: blue;
+}
+.specialist {
+    color:#31d8d3;
+}
+.candidate-master{
+    color: purple;
+}
