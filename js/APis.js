@@ -28,17 +28,38 @@ function descargarDatos(usuario) {
 }
 
 function compare (a,b){
+    console.log('hola');
     return a.rating < b.rating;
+}
+function comp (a,b){
+    return a < b;
 }
 
 function imprimirHTML(dato) {
 
-    console.log(dato);
+    //console.log(dato);
 
-    dato.sort( compare );
+    let personas = [];
 
-    dato.forEach(usuario => {
-        //usuario = dato[0];
+    for(let i=0; i<dato.length; i++){
+        personas.push( parseInt(dato[i].rating) );
+    }
+
+    personas.sort(function(a,b) { return a - b; });
+    personas.reverse();
+
+    console.log(typeof personas[1]);
+
+    console.log(personas);
+
+    personas.forEach(p => {
+        let usuario;
+
+        for(let i =0; i<dato.length; i++){
+            if( p == dato[i].rating ){
+                usuario = dato[i];
+            }
+        }
 
         //console.log(dato[0]);
 
