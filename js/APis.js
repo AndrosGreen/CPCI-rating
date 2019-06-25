@@ -75,8 +75,10 @@ function imprimirHTML(dato) {
 
         tr.innerHTML = `
             <tr>
-                <td class="${rank}">${nombre}</td>
-                <td>${ranking}</td>
+                <td class="${rank}">  
+                    <a href="https://codeforces.com/profile/${nombre}" class="${rank}">${nombre}</a>   
+                </td>
+                <td> ${ranking} </td>
             </tr>
         `;
 

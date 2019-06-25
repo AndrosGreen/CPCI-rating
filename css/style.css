@@ -19,6 +19,9 @@ th, td {
 th {
     background-color: #aed7f2;
 }
+a {
+    text-decoration: none;
+}
 
 /** Utilidades **/
 
