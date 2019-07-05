@@ -40,6 +40,7 @@ function imprimirHTML(dato) {
     //console.log(dato);
 
     let personas = [];
+    bu = []; // cubeta para evitar repetidos
 
     for(let i=0; i<dato.length; i++){
         personas.push( parseInt(dato[i].rating) );
@@ -55,13 +56,21 @@ function imprimirHTML(dato) {
     personas.forEach(p => {
         let usuario;
 
+        
+
+        for(let i=0; i<100; i++){
+            bu.push(0);
+        }
+
+        let pos = 0;
         for(let i =0; i<dato.length; i++){
-            if( p == dato[i].rating ){
+            if( p == dato[i].rating && bu[i] == 0){
                 usuario = dato[i];
+                pos = i;
             }
         }
 
-        //console.log(dato[0]);
+        bu[pos] = 1;
 
         const nombre = usuario.handle;
         const ranking = usuario.rating;
