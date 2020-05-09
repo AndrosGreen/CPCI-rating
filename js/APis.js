@@ -1,4 +1,5 @@
 alumnos = ['Andros_',
+           'alexia_martinez',
            'sggutier',
            'Thanya_Leif',
            'OrlandoIsay',
@@ -11,7 +12,8 @@ alumnos = ['Andros_',
            'C4rlosVz',
            'Melecichu',
            'AuroraPrz1809',
-           'alexia_martinez'];
+           'MarioJimenez9'
+           ];
 
 function descargarDatos(usuario) {
     console.log('Hola');
