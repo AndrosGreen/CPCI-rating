@@ -30,7 +30,6 @@ function descargarDatos(usuario) {
 }
 
 function compare (a,b){
-    console.log('hola');
     return a.rating < b.rating;
 }
 function comp (a,b){
